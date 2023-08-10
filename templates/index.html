@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Transfer App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>File Transfer App</h1>
+        <form method="post" enctype="multipart/form-data">
+            <label for="source_ip">Source IP:</label>
+            <input type="text" id="source_ip" name="source_ip" required><br>
+            <label for="target_ip">Target IP:</label>
+            <input type="text" id="target_ip" name="target_ip" required><br>
+            <label for="port">Port:</label>
+            <input type="text" id="port" name="port" required><br>
+            <input type="file" id="file" name="file" required><br>
+            <div class="button-container">
+                <input type="submit" value="Transfer File">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
